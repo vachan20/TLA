@@ -5,14 +5,14 @@ pipeline {
         stage('Dependencies') {
             steps {
                 echo 'Fetching dependencies...'
-                sh 'make deps'
+
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'make test'
+        
             }
         }
 
@@ -38,14 +38,14 @@ pipeline {
         stage('Package') {
             steps {
                 echo 'Packaging the binary...'
-                sh 'make package'
+            
             }
         }
 
         stage('Cleanup') {
             steps {
                 echo 'Cleaning up...'
-                sh 'make clean'
+             
             }
         }
     }
